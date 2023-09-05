@@ -11,6 +11,7 @@ import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.swing.*;
 import java.util.List;
 
 @Getter
@@ -25,7 +26,7 @@ public class User {
     private String name;
 
     @OneToOne(cascade = CascadeType.ALL)
-    private Account acconut;
+    private Account account;
 
     @OneToOne(cascade = CascadeType.ALL)
     private Card card;

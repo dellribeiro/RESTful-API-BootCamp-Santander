@@ -21,8 +21,20 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	runtimeOnly 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.28'
 
+
+	compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.28'
+	annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+	// OpenAPI (Swagger) https://github.com/springdoc/springdoc-openapi
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0'
+
+}
+
+tasks.jar{
+	manifest{
+		attributes["Main-Class"] = "me.dio.SantanderApiRest.Application"
+	}
 }
 
 tasks.named('test') {
