@@ -1,4 +1,4 @@
-package me.dio.SantanderAPI.REST;
+package me.dio.SantanderApiRest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
